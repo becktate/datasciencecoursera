@@ -42,6 +42,6 @@ getOutcomeNum <- function(outcome){
 sortByColumn <- function(x, colNum){
     dataFrame <- as.data.frame(x)
     dataFrame <- dataFrame[complete.cases(dataFrame[,colNum]),]
-    returnData <- dataFrame[order(dataFrame[,colNum]),]
+    returnData <- dataFrame[order(dataFrame[,colNum],dataFrame[,2]),]
     returnData
 }
